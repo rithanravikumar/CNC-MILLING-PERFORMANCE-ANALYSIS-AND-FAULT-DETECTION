@@ -87,23 +87,36 @@ def make_predictions(X):
     return pd.DataFrame(decoded_predictions)
 
 # Streamlit UI
-st.title("🔧 Tool Wear Prediction App")
+import streamlit as st
+
+st.markdown(
+    "<h1 style='color:#800000;'>🔧 Tool Wear Prediction App</h1>", 
+    unsafe_allow_html=True
+)
+
 st.markdown(
     """
-    ## 📌 Overview
-    This project focuses on analyzing **CNC milling machine performance** and detecting faults using **deep learning techniques**. 
-    The primary objective is to predict:
-    - 🛠 **Tool Condition** (Unworn/Worn)
-    - ⚙️ **Machining Finalization** (Yes/No)
-    - 🔍 **Passed Visual Inspection** (Yes/No)
-    
-    Using **LSTM-based deep learning models**, the project processes **sensor data** collected from CNC milling experiments. 
-    The web app is built with **Streamlit** for an interactive experience.
-    """
+    <h2 style='color:#800000;'>📌 Overview</h2>
+    <p style='color:#800000;'>
+    This project focuses on analyzing <b>CNC milling machine performance</b> and detecting faults using <b>deep learning techniques</b>. 
+    </p>
+    <ul style='color:#800000;'>
+        <li>🛠 <b>Tool Condition</b> (Unworn/Worn)</li>
+        <li>⚙️ <b>Machining Finalization</b> (Yes/No)</li>
+        <li>🔍 <b>Passed Visual Inspection</b> (Yes/No)</li>
+    </ul>
+    <p style='color:#800000;'>
+    Using <b>LSTM-based deep learning models</b>, the project processes <b>sensor data</b> collected from CNC milling experiments. 
+    The web app is built with <b>Streamlit</b> for an interactive experience.
+    </p>
+    """,
+    unsafe_allow_html=True
 )
-st.write("Upload your CSV file to predict tool wear conditions.")
+
+st.markdown("<p style='color:#800000;'>Upload your CSV file to predict tool wear conditions.</p>", unsafe_allow_html=True)
 
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
+
 
 if uploaded_file is not None:
     X, original_data = preprocess_data(uploaded_file)

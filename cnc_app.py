@@ -25,7 +25,7 @@ def add_bg_from_local(image_path):
         unsafe_allow_html=True
     )
 
-add_bg_from_local(r"CNC Background.jpg")
+add_bg_from_local(r"cnc ai.jpg")
 
 
 # Load the trained LSTM model

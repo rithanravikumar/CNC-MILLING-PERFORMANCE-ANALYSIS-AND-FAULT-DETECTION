@@ -98,7 +98,7 @@ st.markdown(
     """
     <h2 style='color:#FF0000;'>📌 Overview</h2>
     <p style='color:#FF0000;'>
-    This project focuses on analyzing <b>CNC milling machine performance</b> and detecting faults using <b>deep learning techniques</b>. 
+    This project aims to assess the performance of CNC milling machines and identify faults using deep learning techniques.
     </p>
     <ul style='color:#FF0000;'>
         <li>🛠 <b>Tool Condition</b> (Unworn/Worn)</li>
@@ -106,14 +106,13 @@ st.markdown(
         <li>🔍 <b>Passed Visual Inspection</b> (Yes/No)</li>
     </ul>
     <p style='color:#FF0000;'>
-    Using <b>LSTM-based deep learning models</b>, the project processes <b>sensor data</b> collected from CNC milling experiments. 
-    The web app is built with <b>Streamlit</b> for an interactive experience.
+    By leveraging LSTM-based deep learning models, the system analyzes sensor data from CNC milling experiments. The web application, developed using Streamlit, provides an interactive user experience.
     </p>
     """,
     unsafe_allow_html=True
 )
 
-st.markdown("<p style='color:#FF0000;'>Upload your CSV file to predict tool wear conditions.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#FF0000;'>Simply upload your CSV file to predict tool wear conditions..</p>", unsafe_allow_html=True)
 
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
 
